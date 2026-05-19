@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        alert("Ciallo～(∠・ω< )⌒❤️")
+    </script>
+    <style>
+        body {
+            background-image: url('背景.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+
+        }
+
+        .quan {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dakuang {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .zhuyekuang {
+            width: 350px;
+            height: 430px;
+            background-color: rgba(250, 234, 234, 0.8);
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .tx {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        .qmk {
+            width: 300px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-top: 10px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ltk {
+            width: 300px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            align-items: center;
+            justify-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            backdrop-filter: blur(1px);
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quan">
+        <div class="dakuang">
+            <div class="zhuyekuang">
+                <div class="txk"><img src="头像.jpg" alt="" class="tx"></div>
+                <div class="qmk">
+                    <h5>写的什么玩意这是草泥马</h5>
+                </div>
+                <div class="ltk">
+                    <a href=""><img src="qq.png" alt="qq" class="icon"></a>
+                    <a href=""><img src="推特.png" alt="twitter" class="icon"></a>
+                    <a href=""><img src="telegram.png" alt="telegram" class="icon"></a>
+                    <a href=""><img src="bilibili.png" alt="bilibili" class="icon"></a>
+                    <a href=""><img src="github.png" alt="github" class="icon"></a>
+                    <a href=""><img src="steam.png" alt="steam" class="icon"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

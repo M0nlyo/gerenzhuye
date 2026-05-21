@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-<body>
+    <link rel="stylesheet" href="cebianlan.css">
     <script>
         window.MUSIC_PLAYER_CONFIG = {
             musicDir: 'https://music.xn--eqrr82b.top/music',
@@ -28,16 +27,21 @@
                 },
             ],
             jsmediatagsPath: 'https://cdn.jsdelivr.net/gh/flyingiceyyds/HTML5-Mini-Music-Player@main/jsmediatags.min.js',
-            playFilesFirst: false,      // 是否优先播放files中未分类音乐
-            loopCurrentList: false,     // 列表循环是否只循环当前歌单
-            autoLoadEqPreset: true,     //是否自动加载EQ预设
-            autoLoadEqPresetId: 'rock', //自动加载的EQ预设id
+            playFilesFirst: false,      
+            loopCurrentList: false,     
+            autoLoadEqPreset: true,     
+            autoLoadEqPresetId: 'rock', 
         };
     </script>
-    <script
-        src="https://cdn.jsdelivr.net/gh/flyingiceyyds/HTML5-Mini-Music-Player@main/MiniMusicPlayer.min.js"></script>
-</body>
-<style>
+    <style>
+    .icon {
+        transition: transform 0.3s ease;
+    }
+
+    .icon:hover {
+        transform: scale(1.2);
+    }
+
     body {
         background-image: url('背景.JPG');
         background-size: cover;
@@ -133,17 +137,18 @@
     }
 
     .tu1 {
-        width: 150px;
+        width: 170px;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.3);
         border-radius: 20px 0 0 20px;
         position: relative;
-        box-shadow: 20px 0px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 10px 0px 10px rgb(128, 128, 128);
     }
 
     .bt1 {
         position: relative;
-        left: 10px;
+        left: 20px;
+        top: 10px;
     }
 
     .xx1 {
@@ -163,6 +168,44 @@
 </head>
 
 <body>
+    <div class="page-container">
+        <!-- 核心：隐藏的复选框，用来控制菜单状态 -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- 顶部导航栏 -->
+        <div class="navbar">
+            <!-- 用label关联checkbox，点击label相当于点击checkbox -->
+            <label for="menu-toggle" class="menu-btn">☰</label>
+        </div>
+
+        <!-- 遮罩层：点击遮罩会触发label，取消checkbox选中状态，关闭菜单 -->
+        <label for="menu-toggle" class="sidebar-overlay"></label>
+
+        <!-- 侧边栏菜单：用flex布局固定底部按钮，中间内容可滚动 -->
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-title">这是侧边栏</div>
+
+                <!-- 第一组菜单 -->
+                <div class="menu-item">关于Monly</div>
+                <div class="menu-item">最新力作</div>
+
+                <!-- 第二组菜单 -->
+                <div class="menu-group-title">视奸列表</div>
+                <div class="menu-item">游戏账号</div>
+                <div class="menu-item">在线状态</div>
+                <div class="menu-item">设备信息</div>
+
+                <!-- 第三组菜单 -->
+                <div class="menu-group-title">投喂</div>
+                <div class="menu-item">微信支付</div>
+                <div class="menu-item">支付宝</div>
+            </div>
+
+            <!-- 底部按钮 -->
+            <button class="sidebar-bottom-btn">加入 QQ 群</button>
+        </div>
+    </div>
     <div class="quan">
         <div class="dakuang">
             <div class="zhuyekuang">
@@ -181,18 +224,19 @@
                 </div>
             </div>
             <div class="wenzhang1">
-                <div class="tu1"><img src="文章1.jpg" alt="" class="tu1"></div>
+                <div class="tu1"><img src="文章1.gif" alt="" class="tu1"></div>
                 <div class="wenzi1">
                     <div class="bt1">
-                        <h3 class="bt1">和晴晴的第一个520！</h3>
+                        <h3 class="bt1">这是啥</h3>
                     </div>
                     <div class="xx1">
-                        <p class="xx1">法张雪晴法张雪晴法张雪晴法张雪晴法张雪晴法张雪晴法张雪晴法张雪晴法张雪晴</p>
+                        <p class="xx1"></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/gh/flyingiceyyds/HTML5-Mini-Music-Player@main/MiniMusicPlayer.min.js"></script>
 </body>
 
 </html>

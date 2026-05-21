@@ -1,0 +1,140 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    /* 页面容器 */
+    .page-container {
+      position: relative;
+      width: 100%;
+      overflow: visible;
+    }
+
+    /* 顶部导航栏 */
+    .navbar {
+      height: 60px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    /* 隐藏原生复选框 */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* 汉堡菜单按钮（label绑定checkbox） */
+    .menu-btn {
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* 侧边栏遮罩层 */
+    .sidebar-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 9998;
+    }
+
+    /* 侧边栏本体：关键修改在这里 */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 70%;
+      max-width: 320px;
+      height: 100%;
+      background-color: #fff;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 9999;
+      /* 新增：让内容超出时可以滚动 */
+      overflow-y: auto;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 新增：菜单内容容器，用来撑开高度并滚动 */
+    .sidebar-content {
+      flex: 1;
+      padding: 20px 0;
+    }
+
+    /* 关键：当checkbox被选中时，显示侧边栏和遮罩 */
+    #menu-toggle:checked~.sidebar-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #menu-toggle:checked~.sidebar {
+      transform: translateX(0);
+    }
+
+    /* 侧边栏标题 */
+    .sidebar-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    /* 菜单分组标题 */
+    .menu-group-title {
+      d font-size: 14px;
+      color: #999;
+      margin: 20px 20px 10px;
+    }
+
+    /* 菜单项 */
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      font-size: 18px;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .menu-item:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* 底部按钮 */
+    .sidebar-bottom-btn {
+      margin: 20px;
+      padding: 14px;
+      background-color: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      flex-shrink: 0;
+      /* 防止按钮被压缩 */
+    }
+
+    /* 可选：美化滚动条 */
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      background: #afafaf;
+      border-radius: 3px;
+    }

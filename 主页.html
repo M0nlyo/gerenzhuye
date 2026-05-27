@@ -27,147 +27,148 @@
                 },
             ],
             jsmediatagsPath: 'https://cdn.jsdelivr.net/gh/flyingiceyyds/HTML5-Mini-Music-Player@main/jsmediatags.min.js',
-            playFilesFirst: false,      
-            loopCurrentList: false,     
-            autoLoadEqPreset: true,     
-            autoLoadEqPresetId: 'rock', 
+            playFilesFirst: false,
+            loopCurrentList: false,
+            autoLoadEqPreset: true,
+            autoLoadEqPresetId: 'rock',
         };
     </script>
     <style>
-    .icon {
-        transition: transform 0.3s ease;
-    }
+        .icon {
+            transition: transform 0.3s ease;
+        }
 
-    .icon:hover {
-        transform: scale(1.2);
-    }
+        .icon:hover {
+            transform: scale(1.2);
+        }
 
-    body {
-        background-image: url('背景.JPG');
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
+        body {
+            background-image: url('背景.JPG');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
 
-    }
+        }
 
-    .quan {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        .quan {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .dakuang {
-        width: 400px;
-        height: 100%;
-        background-color: rgb(255, 231, 231, 0.5);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        .dakuang {
+            width: 400px;
+            height: 100%;
+            background-color: rgb(255, 231, 231, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .zhuyekuang {
-        width: 350px;
-        height: 430px;
-        background-color: rgba(250, 234, 234, 0.5);
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 20px;
-        backdrop-filter: blur(5px);
-        border: 2px solid rgba(0, 0, 0, 1);
-    }
+        .zhuyekuang {
+            width: 350px;
+            height: 430px;
+            background-color: rgba(250, 234, 234, 0.5);
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(0, 0, 0, 1);
+        }
 
-    .tx {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-top: 20px;
-        border: 2px solid rgba(0, 0, 0, 1);
-    }
+        .tx {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 2px solid rgba(0, 0, 0, 1);
+        }
 
-    .qmk {
-        width: 300px;
-        height: 50px;
-        background-color: rgba(255, 255, 255, 0.7);
-        margin-top: 10px;
-        border-radius: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid rgba(0, 0, 0, 1);
-    }
+        .qmk {
+            width: 300px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.7);
+            margin-top: 10px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgba(0, 0, 0, 1);
+        }
 
-    .ltk {
-        width: 300px;
-        height: 200px;
-        background-color: rgba(255, 255, 255, 0.3);
-        margin-top: 10px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 10px;
-        align-items: center;
-        justify-items: center;
-        padding: 10px;
-        box-sizing: border-box;
-        border-radius: 20px;
-        backdrop-filter: blur(1px);
-        border: 2px solid rgba(0, 0, 0, 1);
-    }
+        .ltk {
+            width: 300px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            align-items: center;
+            justify-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            backdrop-filter: blur(1px);
+            border: 2px solid rgba(0, 0, 0, 1);
+        }
 
-    .icon {
-        width: 60px;
-        height: 60px;
-        object-fit: contain;
-        display: block;
-    }
+        .icon {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            display: block;
+        }
 
-    .wenzhang1 {
-        width: 350px;
-        height: 200px;
-        background-color: rgb(255, 255, 255);
-        margin-top: 20px;
-        border-radius: 20px;
-        display: flex;
-        border: 2px solid rgba(0, 0, 0, 1);
-    }
+        .wenzhang1 {
+            width: 350px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            margin-top: 20px;
+            border-radius: 20px;
+            display: flex;
+            border: 2px solid rgba(0, 0, 0, 1);
+        }
 
-    .tu1 {
-        width: 170px;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 20px 0 0 20px;
-        position: relative;
-        box-shadow: 10px 0px 10px rgb(128, 128, 128);
-    }
+        .tu1 {
+            width: 170px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 20px 0 0 20px;
+            position: relative;
+            box-shadow: 10px 0px 10px rgb(128, 128, 128);
+        }
 
-    .bt1 {
-        position: relative;
-        left: 20px;
-        top: 10px;
-    }
+        .bt1 {
+            position: relative;
+            left: 20px;
+            top: 10px;
+        }
 
-    .xx1 {
-        position: relative;
-        left: 10px;
-        width: 150px;
-        height: 100px;
+        .xx1 {
+            position: relative;
+            left: 10px;
+            width: 150px;
+            height: 100px;
 
-    }
+        }
 
-    .wenzi1 {
-        width: 200px;
-        height: 100%;
-        border-radius: 0 20px 20px 0;
-    }
-</style>
+        .wenzi1 {
+            width: 200px;
+            height: 100%;
+            border-radius: 0 20px 20px 0;
+        }
+    </style>
 </head>
 
 <body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
     <div class="page-container">
         <!-- 核心：隐藏的复选框，用来控制菜单状态 -->
         <input type="checkbox" id="menu-toggle">
@@ -236,7 +237,8 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/flyingiceyyds/HTML5-Mini-Music-Player@main/MiniMusicPlayer.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/flyingiceyyds/HTML5-Mini-Music-Player@main/MiniMusicPlayer.min.js"></script>
 </body>
 
 </html>
